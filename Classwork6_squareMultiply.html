@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Classwork 6</title>
+    </head>
+
+    <body>
+        <script>
+            var matrix1 = [
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+            ]; 
+
+            var matrix2 = [
+                [7,8,9],
+                [4,5,6],
+                [1,2,3]
+            ];
+
+            var result = [
+                [0,0,0],
+                [0,0,0],
+                [0,0,0]
+            ]; 
+
+            document.write("The first matrix is: <br/>");
+            for(i=0; i<3; i++){
+                for(j=0; j<3; j++){
+                    document.write(matrix1[i][j] + " ");
+                }
+                document.write("<br/>")
+            }
+
+            document.write("The second matrix is: <br/>");
+            for(i=0; i<3; i++){
+                for(j=0; j<3; j++){
+                    document.write(matrix2[i][j] + " ");
+                }
+                document.write("<br/>")
+            }
+
+            //calculating
+            for(i=0; i<3; i++){
+                for(j=0; j<3; j++){
+                    for(x=0; x< 3; x++){
+                         result[i][j] = result[i][j] + matrix1[i][x] * matrix2[x][j];
+                    }
+                }
+            }
+
+            //printing
+            document.write("The resulting matrix is: <br/>");
+            for(i=0; i<3; i++){
+                for(j=0; j<3; j++){
+                    document.write(result[i][j] + " ");
+                }
+                document.write("<br/>");
+            }
+        </script>
+        
+    </body>
+</HTML>

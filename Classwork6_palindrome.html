@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>Classwork 6</title>
+    </head>
+
+    <body>
+        <script>
+            var str = prompt("Enter a word to check if it's a palindrome: ");
+            answer=true;
+            for(i=0; i < str.length / 2; i++){
+                if (str[i] != str[str.length - 1 -i]){
+                    answer= false;
+                }
+            }
+
+            if(answer){
+                document.write("The word " + str + " is a palidrome.");
+            }
+            else{
+                document.write("The word " + str + " is not a palidrome.");
+            }
+
+        </script>
+        
+    </body>
+</HTML>
